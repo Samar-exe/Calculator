@@ -42,13 +42,18 @@ for (let i = 0; i <= 9; i++) {
   numbers[i] = document.querySelector("#num" + i);
 };
 const operators = [];
-for (let i = 1; i <= 5; i++) {
-  operators[i] = document.querySelector("#btn" + i);
+for (let i = 0; i < 4; i++) {
+  operators[i] = document.querySelector("#btn" + (i + 1));
 };
 
 // to store the numbers in the firstNum array
 numbers.map((item) => {
   return item.addEventListener("click", () => { return num1Array.push(item.textContent) });
+})
+operators.map((a) => {
+  return a.addEventListener("click", () => {
+    return console.log("sam")
+  })
 })
 
 clear.addEventListener("click", () => { display.textContent = " " })
