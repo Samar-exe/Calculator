@@ -13,4 +13,12 @@ function div(a, b) {
 function operate(operator, num1, num2) {
 
 }
-let firstNum, operator, lastNum;
+
+const numbers = [];
+for (let i = 1; i <= 9; i++) {
+  numbers[i] = document.querySelector("#num" + i);
+};
+const operators = [];
+for (let i = 1; i <= 6; i++) {
+  operators[i] = document.querySelector("#btn" + i);
+};
