@@ -32,7 +32,7 @@ function operate(operator, num1, num2) {
 
 //Necessary Variable Declaration.
 let num1Array = [];
-let operator = [];
+let operator = "";
 let num2Array = [];
 const numbers = [];
 let display = document.querySelector("#display-container")
