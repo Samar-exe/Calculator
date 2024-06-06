@@ -22,3 +22,5 @@ const operators = [];
 for (let i = 1; i <= 6; i++) {
   operators[i] = document.querySelector("#btn" + i);
 };
+const clear = document.querySelector("#clear");
+
