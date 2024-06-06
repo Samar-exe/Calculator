@@ -22,7 +22,7 @@ const numbers = [];
 let display = document.querySelector("#display-container")
 const clear = document.querySelector("#clear");
 
-for (let i = 1; i <= 9; i++) {
+for (let i = 0; i <= 9; i++) {
   numbers[i] = document.querySelector("#num" + i);
 };
 const operators = [];
