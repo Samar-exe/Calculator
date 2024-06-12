@@ -74,6 +74,12 @@ body {
     height: 50px;
     width: 220px;
     border: 1px solid red;
-    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
     
+}
+.current{
+    font-size: 25px;
 }
