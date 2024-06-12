@@ -2,7 +2,8 @@
     box-sizing: border-box;
 }
 body {
-  background-color: white;
+  background-color: #373a36;
+  color:#e6e2dd;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -13,7 +14,7 @@ body {
   flex-direction: column;
   gap: 20px;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid #d48166;
   width: 330px;
   padding: 10px;
 }
@@ -29,43 +30,34 @@ body {
 }
 .btn {
   width: 20px;
-  border: 1px solid lightgrey;
   margin: 15px;
   font-size: 20px;
-  background-color: white;
+  background-color: #d48166;
+  border: 0px;
+  color: white;
   padding-left: 10px;
   padding-right: 25px;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 150px;
 }
-.number {
-  border: 1px solid greenyellow;
-}
+
 .number:hover {
   background-color: palegreen;
 }
-.operator {
-  border: 1px solid steelblue;
-}
+
 .operator:hover{
     background-color: paleturquoise;
 }
-.clear {
-  border: 1px solid purple;
-}
+
 .clear:hover{
     background-color: plum;
 }
-.decimal {
-  border: 1px solid rgb(122, 0, 0);
-}
+
 .decimal:hover{
     background-color: rgba(255, 81, 81, 0.781);
 }
 
-.equal{
-    border: 1px solid slateblue;
-}
+
 .equal:hover{
     background-color: lightslategray;
 }
@@ -73,13 +65,22 @@ body {
 .screen{
     height: 50px;
     width: 220px;
-    border: 1px solid red;
+    border: 1px solid #d48166;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
+    border-radius: 100px;
+    padding-right: 20px;
     
 }
 .current{
     font-size: 25px;
 }
+ h2 a{
+    background-color: #d48166;
+    color: #e6e2dd;
+    padding: 20px;
+    border-radius: 200px;
+    text-decoration: none;
+ }
