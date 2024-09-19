@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 :root {
   --surface: #111318;
   --surface-container: #1d2024;
@@ -85,6 +86,15 @@ body {
   transition: 0.2s;
 }
 .opr:hover {
+  background-color: var(--secondary-variant);
+  color: var(--on-secondary-variant);
+}
+.clear,.del{
+  background-color: var(--secondary-container);
+  color: var(--on-secondary-container);
+  transition: 0.2s;
+}
+.clear:hover,.del:hover{
   background-color: var(--secondary-variant);
   color: var(--on-secondary-variant);
 }
