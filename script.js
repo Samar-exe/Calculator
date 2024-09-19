@@ -93,11 +93,11 @@ numberButtons.forEach(btn => {
 //run operation function 
 equalButton.addEventListener("click", () => {
   if (finalResult === null) {
-    finalResult = selectOperation(parseInt(num1), parseInt(num2), operatorChoosen);
+    finalResult = selectOperation(parseFloat(num1), parseFloat(num2), operatorChoosen);
     currentDisplay.textContent = finalResult;
   }
   else {
-    finalResult = selectOperation(parseInt(finalResult), parseInt(num2), operatorChoosen);
+    finalResult = selectOperation(parseFloat(finalResult), parseFloat(num2), operatorChoosen);
     currentDisplay.textContent = finalResult;
   };
   num1 = "";
