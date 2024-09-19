@@ -21,6 +21,7 @@
   --tertiary-container: #563e5c;
   --on-tertiary-container: #f9d8fd;
   --outline: #8e9099;
+  font-size: 16px;
 }
 * {
   box-sizing: border-box;
