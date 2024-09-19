@@ -1,36 +1,108 @@
 // Operation Functions
-function add(a, b) {
+function addNumbers(a, b) {
   return a + b;
 }
-function sub(a, b) {
+function subtractNumbers(a, b) {
   return a - b;
 }
-function mult(a, b) {
+function multiplyNumbers(a, b) {
   return a * b;
 }
-function div(a, b) {
+function divideNumbers(a, b) {
+  if (b == 0) {
+    return null;
+  }
   return a / b;
 }
 
 //function to perform operation.
-function operation(num1, num2, operator) {
+function selectOperation(num1, num2, operator) {
   if (operator === '+') {
-    add(num1, num2);
+    return addNumbers(num1, num2);
   }
   else if (operator === '-') {
-    sub(num1, num2);
+    return subtractNumbers(num1, num2);
   }
   else if (operator === '*') {
-    mult(num1, num2);
+    return multiplyNumbers(num1, num2);
   }
   else if (operator === '/') {
-    div(num1, num2);
+    return divideNumbers(num1, num2);
   }
   else {
-    return -1;
+    return null;
   };
 }
 // Assigning variables to be used.
 let num1;
 let num2;
-let operator;
+let finalResult = null;
+let operatorChoosen = null;
+// variable for display
+let resultDisplay = document.querySelector(".resultDisplay");
+let currentDisplay = document.querySelector(".currentDisplay");
+
+// clear display
+let clearButton = document.querySelector(".clear");
+clearButton.addEventListener("click", () => {
+  resultDisplay.textContent = " ";
+  currentDisplay.textContent = " ";
+  num1 = "";
+  num2 = "";
+  operatorChoosen = null;
+  finalResult = null;
+});
+
+//operators.
+let operatorButtons = document.querySelectorAll(".opr");
+operatorButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    operatorChoosen = btn.textContent;
+    currentDisplay.textContent = operatorChoosen;
+    resultDisplay.textContent = finalResult;
+  })
+});
+
+//numbers.
+let numberButtons = document.querySelectorAll(".num");
+numberButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (operatorChoosen === null) {
+      if (num1 === undefined) {
+        num1 = btn.textContent;
+        currentDisplay.textContent = num1;
+      }
+      else {
+        num1 += btn.textContent;
+        currentDisplay.textContent = num1;
+      };
+    }
+    else {
+      if (num2 === undefined) {
+        num2 = btn.textContent;
+        currentDisplay.textContent = num2;
+      }
+      else {
+        num2 += btn.textContent;
+        currentDisplay.textContent = num2;
+      };
+    };
+  });
+})
+
+//run operation function 
+let equalButton = document.querySelector(".equal")
+equalButton.addEventListener("click", () => {
+  if (finalResult === null) {
+    finalResult = selectOperation(parseInt(num1), parseInt(num2), operatorChoosen);
+    currentDisplay.textContent = finalResult;
+  }
+  else {
+    finalResult = selectOperation(parseInt(finalResult), parseInt(num2), operatorChoosen);
+    currentDisplay.textContent = finalResult;
+  };
+  num1 = "";
+  num2 = "";
+  operatorChoosen = "";
+})
+
