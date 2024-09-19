@@ -58,8 +58,8 @@ body {
   color: var(--on-surface);
   border: 1.4px solid var(--outline);
   border-radius: 12px;
-  display: flex;
-  justify-content: end;
+  display: grid;
+  justify-items: end;
   align-items: center;
 }
 .buttons {
