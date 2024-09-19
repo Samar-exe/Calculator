@@ -1,0 +1,103 @@
+:root {
+  --surface: #111318;
+  --surface-container: #1d2024;
+  --on-surface: #e2e2e9;
+  --bg: #111318;
+  --on-bg: #e2e2e9;
+  --on-primary: #09305f;
+  --primary: #aac7ff;
+  --primary-container: #274777;
+  --on-primary-container: #d6e3ff;
+  --inverse-primary: #405fbf;
+  --secondary: #bec7dc;
+  --on-secondary: #283141;
+  --secondary-container: #3e4759;
+  --on-secondary-container: #dae2f9;
+  --secondary-variant: #bec7dc;
+  --on-secondary-variant: #131c2b;
+  --tertiary: #dcbce0;
+  --on-tertiary: #3f2845;
+  --tertiary-container: #563e5c;
+  --on-tertiary-container: #f9d8fd;
+  --outline: #8e9099;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+
+.main {
+  background-color: var(--bg);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calc-body {
+  background-color: var(--surface-container);
+  border: 2px solid var(--outline);
+  border-radius: 12px;
+  min-width: 350px;
+  min-height: 550px;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr;
+  padding: 16px;
+  gap: 12px;
+}
+.display {
+  font-size: 2rem;
+  padding: 16px;
+  background-color: var(--surface-container);
+  color: var(--on-surface);
+  border: 1.4px solid var(--outline);
+  border-radius: 12px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.buttons {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.btn {
+  font-weight: 600;
+  border: 2px solid var(--on-accent);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.opr {
+  background-color: var(--secondary-container);
+  color: var(--on-secondary-container);
+  transition: 0.2s;
+}
+.opr:hover {
+  background-color: var(--secondary-variant);
+  color: var(--on-secondary-variant);
+}
+.num {
+  background-color: var(--primary-container);
+  color: var(--on-primary-container);
+  transition: 0.2s;
+}
+.num:hover {
+  background-color: var(--inverse-primary);
+  color: var(--on-primary-container);
+}
+.equal {
+  background-color: var(--tertiary-container);
+  color: var(--on-tertiary-container);
+  transition: 0.2s;
+}
+
+.equal:hover {
+  background-color: var(--on-tertiary-container);
+  color: var(--tertiary-container);
+}
