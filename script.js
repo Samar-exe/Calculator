@@ -1,4 +1,3 @@
-// Operation Functions
 function addNumbers(a, b) {
   return a + b;
 }
@@ -15,7 +14,6 @@ function divideNumbers(a, b) {
   return a / b;
 }
 
-//function to perform operation.
 function selectOperation(num1, num2, operator) {
   if (operator === '+') {
     return addNumbers(num1, num2);
@@ -38,11 +36,9 @@ let num1;
 let num2;
 let finalResult = null;
 let operatorChoosen = null;
-// variable for display
+// Dom elements.
 let resultDisplay = document.querySelector(".resultDisplay");
 let currentDisplay = document.querySelector(".currentDisplay");
-
-// clear display
 let clearButton = document.querySelector(".clear");
 clearButton.addEventListener("click", () => {
   resultDisplay.textContent = " ";
