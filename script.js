@@ -14,6 +14,7 @@ function divideNumbers(a, b) {
   return a / b;
 }
 
+
 function selectOperation(num1, num2, operator) {
   if (operator === '+') {
     return addNumbers(num1, num2);
@@ -43,6 +44,8 @@ let clearButton = document.querySelector(".clear");
 let operatorButtons = document.querySelectorAll(".opr");
 let numberButtons = document.querySelectorAll(".num");
 let equalButton = document.querySelector(".equal")
+
+// clear display and variables.
 clearButton.addEventListener("click", () => {
   resultDisplay.textContent = " ";
   currentDisplay.textContent = " ";
@@ -52,8 +55,7 @@ clearButton.addEventListener("click", () => {
   finalResult = null;
 });
 
-//operators.
-let operatorButtons = document.querySelectorAll(".opr");
+//Select Operator
 operatorButtons.forEach(btn => {
   btn.addEventListener("click", () => {
     operatorChoosen = btn.textContent;
@@ -62,8 +64,7 @@ operatorButtons.forEach(btn => {
   })
 });
 
-//numbers.
-let numberButtons = document.querySelectorAll(".num");
+//Select numbers.
 numberButtons.forEach(btn => {
   btn.addEventListener('click', () => {
     if (operatorChoosen === null) {
@@ -90,7 +91,6 @@ numberButtons.forEach(btn => {
 })
 
 //run operation function 
-let equalButton = document.querySelector(".equal")
 equalButton.addEventListener("click", () => {
   if (finalResult === null) {
     finalResult = selectOperation(parseInt(num1), parseInt(num2), operatorChoosen);
