@@ -31,7 +31,7 @@
 }
 body {
   margin: 0;
-  height: 100vh;
+  height: clamp(500px, 100vh, 100vh);
   font-size: 100%;
 }
 
