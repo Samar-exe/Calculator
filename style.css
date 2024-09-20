@@ -68,10 +68,10 @@ body {
   max-width: 400px;
 }
 .currentDisplay{
-  font-size: 2.25em;
+  font-size: clamp(16px,2.25em,3em);
 }
 .resultDisplay{
-  font-size: 1em;
+  font-size: clamp(12px,1em,2em);
 }
 .buttons {
   display: grid;
@@ -81,7 +81,7 @@ body {
 }
 .btn {
   font-weight: 600;
-  font-size: 1em;
+  font-size: clamp(12px, 1em, 2em);
   border: 2px solid var(--on-accent);
   border-radius: 20px;
   display: flex;
