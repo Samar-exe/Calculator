@@ -24,12 +24,15 @@
   --outline: #8e9099;
   font-size: 16px;
 }
+
 * {
   box-sizing: border-box;
   font-family: monospace;
 }
 body {
   margin: 0;
+  height: 100vh;
+  font-size: 100%;
 }
 
 .main {
@@ -45,7 +48,9 @@ body {
   border: 2px solid var(--outline);
   border-radius: 12px;
   min-width: 350px;
-  min-height: 550px;
+  max-width: 400px;
+  height: 400px;
+  min-height: 450px;
   display: grid;
   grid-template-rows: 1fr 2fr;
   grid-template-columns: 1fr;
@@ -53,7 +58,6 @@ body {
   gap: 12px;
 }
 .display {
-  font-size: 2rem;
   padding: 16px;
   background-color: var(--surface);
   color: var(--on-surface);
@@ -62,9 +66,13 @@ body {
   display: grid;
   justify-items: end;
   align-items: center;
+  max-width: 400px;
+}
+.currentDisplay{
+  font-size: 2.25em;
 }
 .resultDisplay{
-  font-size: 1.8rem;
+  font-size: 1em;
 }
 .buttons {
   display: grid;
@@ -74,6 +82,7 @@ body {
 }
 .btn {
   font-weight: 600;
+  font-size: 1em;
   border: 2px solid var(--on-accent);
   border-radius: 20px;
   display: flex;
