@@ -55,7 +55,7 @@ body {
 .display {
   font-size: 2rem;
   padding: 16px;
-  background-color: var(--surface-container);
+  background-color: var(--surface);
   color: var(--on-surface);
   border: 1.4px solid var(--outline);
   border-radius: 12px;
@@ -104,8 +104,8 @@ body {
   transition: 0.2s;
 }
 .num:hover {
-  background-color: var(--inverse-primary);
-  color: var(--on-primary-container);
+  background-color: var(--primary);
+  color: var(--on-primary);
 }
 .equal {
   background-color: var(--tertiary-container);
