@@ -47,10 +47,9 @@ body {
   background-color: var(--surface-container);
   border: 2px solid var(--outline);
   border-radius: 12px;
-  min-width: 350px;
-  max-width: 400px;
-  height: 400px;
-  min-height: 450px;
+  /*min-width: 400px;*/
+  height: clamp(450px, 90vh, 550px);
+  width: clamp(300px, 80vw, 350px);
   display: grid;
   grid-template-rows: 1fr 2fr;
   grid-template-columns: 1fr;
