@@ -47,6 +47,22 @@ let equalButton = document.querySelector(".equal");
 let decimalButton = document.querySelector(".dec");
 let sign = document.querySelectorAll(".sign");
 
+function setNum1(value) {
+	if (num1 === undefined) {
+		num1 = value;
+	}
+	else {
+		num1 += value;
+	};
+}
+function setNum2(value) {
+	if (num2 === undefined) {
+		num2 = value;
+	}
+	else {
+		num2 += value;
+	};
+}
 // clear display and variables.
 clearButton.addEventListener("click", () => {
   resultDisplay.textContent = " ";
