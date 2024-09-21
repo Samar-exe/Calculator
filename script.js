@@ -45,6 +45,7 @@ let operatorButtons = document.querySelectorAll(".opr");
 let numberButtons = document.querySelectorAll(".num");
 let equalButton = document.querySelector(".equal");
 let decimalButton = document.querySelector(".dec");
+let sign = document.querySelectorAll(".sign");
 
 // clear display and variables.
 clearButton.addEventListener("click", () => {
