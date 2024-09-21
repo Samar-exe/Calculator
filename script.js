@@ -1,36 +1,36 @@
 function addNumbers(a, b) {
-  return a + b;
+	return a + b;
 }
 function subtractNumbers(a, b) {
-  return a - b;
+	return a - b;
 }
 function multiplyNumbers(a, b) {
-  return a * b;
+	return a * b;
 }
 function divideNumbers(a, b) {
-  if (b == 0) {
-    return null;
-  }
-  return a / b;
+	if (b == 0) {
+		return null;
+	}
+	return a / b;
 }
 
 
 function selectOperation(num1, num2, operator) {
-  if (operator === '+') {
-    return addNumbers(num1, num2);
-  }
-  else if (operator === '-') {
-    return subtractNumbers(num1, num2);
-  }
-  else if (operator === '*') {
-    return multiplyNumbers(num1, num2);
-  }
-  else if (operator === '/') {
-    return divideNumbers(num1, num2);
-  }
-  else {
-    return null;
-  };
+	if (operator === '+') {
+		return addNumbers(num1, num2);
+	}
+	else if (operator === '-') {
+		return subtractNumbers(num1, num2);
+	}
+	else if (operator === '*') {
+		return multiplyNumbers(num1, num2);
+	}
+	else if (operator === '/') {
+		return divideNumbers(num1, num2);
+	}
+	else {
+		return null;
+	};
 }
 // Assigning variables to be used.
 let num1;
@@ -67,7 +67,6 @@ function setNum2(value) {
 clearButton.addEventListener("click", () => {
 	resultDisplay.textContent = " ";
 	currentDisplay.textContent = " ";
-	num1 = "";
 	num2 = "";
 	num1 = undefined;
 	num2 = undefined;
