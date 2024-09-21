@@ -65,13 +65,19 @@ function setNum2(value) {
 }
 // clear display and variables.
 clearButton.addEventListener("click", () => {
-  resultDisplay.textContent = " ";
-  currentDisplay.textContent = " ";
-  num1 = "";
-  num2 = "";
-  operatorChoosen = null;
-  finalResult = null;
+	resultDisplay.textContent = " ";
+	currentDisplay.textContent = " ";
+	num1 = "";
+	num2 = "";
+	operatorChoosen = null;
+	finalResult = null;
 });
+//Event Listener for selecting sign;
+sign.forEach(e => {
+	e.addEventListener("click", () => {
+		if (num1 === undefined) {
+			setNum1(e.textContent);
+			alert(num1);
 
 //Select Operator
 operatorButtons.forEach(btn => {
