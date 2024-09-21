@@ -103,41 +103,41 @@ operatorButtons.forEach(btn => {
 
 //Select numbers.
 numberButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    if (operatorChoosen === null) {
-      if (num1 === undefined) {
-        num1 = btn.textContent;
-        currentDisplay.textContent = num1;
-      }
-      else {
-        num1 += btn.textContent;
-        currentDisplay.textContent = num1;
-      };
-    }
-    else {
-      if (num2 === undefined) {
-        num2 = btn.textContent;
-        currentDisplay.textContent = num2;
-      }
-      else {
-        num2 += btn.textContent;
-        currentDisplay.textContent = num2;
-      };
-    };
-  });
+	btn.addEventListener('click', () => {
+		if (operatorChoosen === null) {
+			if (num1 === undefined) {
+				num1 = btn.textContent;
+				currentDisplay.textContent = num1;
+			}
+			else {
+				num1 += btn.textContent;
+				currentDisplay.textContent = num1;
+			};
+		}
+		else {
+			if (num2 === undefined) {
+				num2 = btn.textContent;
+				currentDisplay.textContent = num2;
+			}
+			else {
+				num2 += btn.textContent;
+				currentDisplay.textContent = num2;
+			};
+		};
+	});
 })
 
 //run operation function 
 equalButton.addEventListener("click", () => {
-  if (finalResult === null) {
-    finalResult = selectOperation(parseFloat(num1), parseFloat(num2), operatorChoosen);
-    currentDisplay.textContent = finalResult;
-  }
-  else {
-    finalResult = selectOperation(parseFloat(finalResult), parseFloat(num2), operatorChoosen);
-    currentDisplay.textContent = finalResult;
-  };
-  num1 = "";
-  num2 = "";
-  operatorChoosen = "";
+	if (finalResult === null) {
+		finalResult = selectOperation(parseFloat(num1), parseFloat(num2), operatorChoosen);
+		currentDisplay.textContent = finalResult;
+	}
+	else {
+		finalResult = selectOperation(parseFloat(finalResult), parseFloat(num2), operatorChoosen);
+		currentDisplay.textContent = finalResult;
+	};
+	num1 = "";
+	num2 = undefined;
+	operatorChoosen = null;
 })
