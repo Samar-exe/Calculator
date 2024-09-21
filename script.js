@@ -87,11 +87,18 @@ sign.forEach(e => {
 });
 //Select Operator
 operatorButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    operatorChoosen = btn.textContent;
-    currentDisplay.textContent = operatorChoosen;
-    resultDisplay.textContent = finalResult;
-  })
+	btn.addEventListener("click", () => {
+		if ((num1.charAt(0) === '+' && num1.length === 1) || (num1.charAt(0) === '-' && num1.length === 1)) {
+			operatorChoosen = null;
+		}
+		else {
+			if (operatorChoosen === null) {
+				operatorChoosen = btn.textContent;
+				currentDisplay.textContent = operatorChoosen;
+				resultDisplay.textContent = finalResult;
+			};
+		};
+	})
 });
 
 //Select numbers.
