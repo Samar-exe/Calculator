@@ -9,7 +9,11 @@ function multiplyNumbers(a, b) {
 }
 function divideNumbers(a, b) {
 	if (b == 0) {
-		return null;
+		currentDisplay.textContent = "Infinity";
+		num1 = undefined;
+		num2 = undefined;
+		operatorChoosen = null;
+		finalResult = null;
 	}
 	return a / b;
 }
