@@ -74,6 +74,34 @@ html.addEventListener("keyup", function() {
 			};
 		};
 	}
+	else {
+		if (event.key === "Backspace" || event.key === "Delete") {
+
+			if (operatorChoosen === null) {
+				if (num1 != undefined) {
+					if (num1 === "") {
+						num1 = undefined;
+					}
+					else {
+						num1 = num1.slice(0, -1);
+						currentDisplay.textContent = num1;
+						;
+					};
+				}
+			}
+			else {
+				if (num2 != undefined) {
+					if (num2 === "") {
+						num2 = undefined;
+					}
+					else {
+						num2 = num2.slice(0, -1);
+						currentDisplay.textContent = num2;
+					};
+				}
+			}
+		}
+	}
 });
 
 deleteButton.addEventListener("click", () => {
