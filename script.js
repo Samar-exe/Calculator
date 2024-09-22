@@ -271,6 +271,8 @@ clearButton.addEventListener("click", () => {
   currentDisplay.textContent = " ";
   num1 = undefined;
   num2 = undefined;
+  num1Previous = undefined;
+  num2Previous = undefined;
   operatorChoosen = null;
   finalResult = null;
 });
