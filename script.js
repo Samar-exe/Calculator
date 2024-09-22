@@ -52,6 +52,7 @@ let regexForHandlingKeyBoardEvents = /[0-9]/
 html.addEventListener("keypress", function() {
 let regexForHandlingKeyBoardEvents = /[0-9]/
 let regexForHandlingNumbers = /[0-9]/;
+let regexForHandlingSigns = /[\/+*-]/;
 html.addEventListener("keyup", function() {
 	if (regexForHandlingKeyBoardEvents.test(event.key)) {
 		if (operatorChoosen === null) {
