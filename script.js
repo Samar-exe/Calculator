@@ -9,11 +9,7 @@ function multiplyNumbers(a, b) {
 }
 function divideNumbers(a, b) {
 	if (b == 0) {
-		currentDisplay.textContent = "Infinity";
-		num1 = undefined;
-		num2 = undefined;
-		operatorChoosen = null;
-		finalResult = null;
+		return null;
 	}
 	return a / b;
 }
@@ -326,11 +322,21 @@ numberButtons.forEach(btn => {
 equalButton.addEventListener("click", () => {
 	if (finalResult === null) {
 		finalResult = selectOperation(parseFloat(num1), parseFloat(num2), operatorChoosen);
-		currentDisplay.textContent = finalResult.toFixed(1);
+		if (finalResult === null) {
+			currentDisplay.textContent = "Infinity";
+		}
+		else {
+			currentDisplay.textContent = finalResult.toFixed(1);
+		};
 	}
 	else {
 		finalResult = selectOperation(parseFloat(finalResult), parseFloat(num2), operatorChoosen);
-		currentDisplay.textContent = finalResult.toFixed(1);
+		if (finalResult === null) {
+			currentDisplay.textContent = "Infinity";
+		}
+		else {
+			currentDisplay.textContent = finalResult.toFixed(1);
+		}
 	};
 	num1 = "";
 	num2 = undefined;
