@@ -49,6 +49,18 @@ let sign = document.querySelectorAll(".sign");
 let deleteButton = document.querySelector(".del");
 
 deleteButton.addEventListener("click", () => {
+	if (operatorChoosen === null) {
+		if (num1 != undefined) {
+			if (num1 === "") {
+				num1 = undefined;
+			}
+			else {
+				num1 = num1.slice(0, -1);
+				currentDisplay.textContent = num1;
+				;
+			};
+		}
+	}
 })
 decimalButton.addEventListener("click", () => {
 	if (operatorChoosen === null) {
