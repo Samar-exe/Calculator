@@ -115,6 +115,15 @@ body {
   background-color: var(--primary);
   color: var(--on-primary);
 }
+.dec {
+  background-color: var(--primary-container);
+  color: var(--on-primary-container);
+  transition: 0.2s;
+}
+.dec:hover {
+  background-color: var(--primary);
+  color: var(--on-primary);
+}
 .equal {
   background-color: var(--tertiary-container);
   color: var(--on-tertiary-container);
