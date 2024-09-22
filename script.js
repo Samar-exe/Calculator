@@ -101,6 +101,17 @@ html.addEventListener("keyup", function() {
 				}
 			}
 		}
+		else if (event.key === "+" || event.key === "-") {
+
+			if (num1 === undefined && operatorChoosen === null) {
+				setNum1(event.key);
+				currentDisplay.textContent = event.key;
+			}
+			else if (num2 === undefined && operatorChoosen != null) {
+				setNum2(event.key)
+				currentDisplay.textContent = event.key;
+			};
+		}
 	}
 });
 
