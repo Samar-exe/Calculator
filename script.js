@@ -48,6 +48,7 @@ let equalButton = document.querySelector(".equal");
 let decimalButton = document.querySelector(".dec");
 let sign = document.querySelectorAll(".sign");
 let deleteButton = document.querySelector(".del");
+let regexForHandlingKeyBoardEvents = /[0-9]/ 
 
 deleteButton.addEventListener("click", () => {
 	if (operatorChoosen === null) {
