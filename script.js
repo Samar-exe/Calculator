@@ -98,6 +98,16 @@ html.addEventListener("keyup", function() {
 					};
 				}
 			}
+
+			if (num1 === undefined && num2 === undefined && finalResult != null) {
+
+				resultDisplay.textContent = " ";
+				currentDisplay.textContent = " ";
+				num1 = undefined;
+				num2 = undefined;
+				operatorChoosen = null;
+				finalResult = null;
+			}
 		}
 		else if (event.key === "+" || event.key === "-") {
 
@@ -122,6 +132,19 @@ html.addEventListener("keyup", function() {
 					resultDisplay.textContent = finalResult;
 				};
 			};
+		}
+		if (event.key === "Enter") {
+			if (finalResult === null) {
+				finalResult = selectOperation(parseFloat(num1), parseFloat(num2), operatorChoosen);
+				currentDisplay.textContent = finalResult.toFixed(1);
+			}
+			else {
+				finalResult = selectOperation(parseFloat(finalResult), parseFloat(num2), operatorChoosen);
+				currentDisplay.textContent = finalResult.toFixed(1);
+			};
+			num1 = "";
+			num2 = undefined;
+			operatorChoosen = null;
 		}
 	}
 });
