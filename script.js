@@ -48,6 +48,8 @@ let decimalButton = document.querySelector(".dec");
 let sign = document.querySelectorAll(".sign");
 let deleteButton = document.querySelector(".del");
 
+deleteButton.addEventListener("click", () => {
+})
 decimalButton.addEventListener("click", () => {
 	if (operatorChoosen === null) {
 		if (num1 === undefined) {
