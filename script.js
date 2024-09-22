@@ -49,7 +49,6 @@ let decimalButton = document.querySelector(".dec");
 let sign = document.querySelectorAll(".sign");
 let deleteButton = document.querySelector(".del");
 let regexForHandlingNumbers = /[0-9]/;
-let regexForHandlingOperators = /[\/+*-]/;
 html.addEventListener("keyup", function() {
 	if (regexForHandlingNumbers.test(event.key)) {
 		if (operatorChoosen === null) {
@@ -111,7 +110,7 @@ html.addEventListener("keyup", function() {
 				currentDisplay.textContent = event.key;
 			};
 		}
-		else if (regexForHandlingOperators.test(event.key)) {
+		if (event.key === "+" || event.key === "/" || event.key === "*" || event.key === "-") {
 
 			if ((num1.charAt(0) === '+' && num1.length === 1) || (num1.charAt(0) === '-' && num1.length === 1)) {
 				operatorChoosen = null;
