@@ -146,6 +146,36 @@ html.addEventListener("keyup", function() {
 			num2 = undefined;
 			operatorChoosen = null;
 		}
+		if (event.key === ".") {
+			if (operatorChoosen === null) {
+				if (num1 === undefined) {
+					num1 = decimalButton.textContent;
+					currentDisplay.textContent = decimalButton.textContent;
+					//decimalButton.disabled = true;
+
+				}
+				else if (num1.indexOf('.') === -1) {
+					num1 += decimalButton.textContent;
+					currentDisplay.textContent += decimalButton.textContent;
+				}
+				else {
+					console.log("Found a Decimal!!");
+				};
+			}
+			else {
+				if (num2 === undefined) {
+					num2 = decimalButton.textContent;
+					currentDisplay.textContent += decimalButton.textContent;
+				}
+				else if (num2.indexOf('.') === -1) {
+					num2 += decimalButton.textContent;
+					currentDisplay.textContent += decimalButton.textContent;
+				}
+				else {
+					console.log("Found a Decimal!!");
+				};
+			};
+		}
 	}
 });
 
