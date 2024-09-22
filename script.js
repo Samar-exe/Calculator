@@ -45,7 +45,10 @@ function selectOperation(num1, num2, operator) {
 // Assigning variables to be used.
 let num1;
 let num2;
+let num1Previous;
+let num2Previous;
 let finalResult = null;
+let finalPrevious = null;
 let operatorChoosen = null;
 // Dom elements.
 let html = document.querySelector("html");
