@@ -47,6 +47,36 @@ let equalButton = document.querySelector(".equal");
 let decimalButton = document.querySelector(".dec");
 let sign = document.querySelectorAll(".sign");
 
+decimalButton.addEventListener("click", () => {
+	if (operatorChoosen === null) {
+		if (num1 === undefined) {
+			num1 = decimalButton.textContent;
+			currentDisplay.textContent = decimalButton.textContent;
+			//decimalButton.disabled = true;
+
+		}
+		else if (num1.indexOf('.') === -1) {
+			num1 += decimalButton.textContent;
+			currentDisplay.textContent += decimalButton.textContent;
+		}
+		else {
+			console.log("Found a Decimal!!");
+		};
+	}
+	else {
+		if (num2 === undefined) {
+			num2 = decimalButton.textContent;
+			currentDisplay.textContent += decimalButton.textContent;
+		}
+		else if (num2.indexOf('.') === -1) {
+			num2 += decimalButton.textContent;
+			currentDisplay.textContent += decimalButton.textContent;
+		}
+		else {
+			console.log("Found a Decimal!!");
+		};
+	};
+})
 function setNum1(value) {
 	if (num1 === undefined) {
 		num1 = value;
