@@ -111,6 +111,19 @@ html.addEventListener("keyup", function() {
 				currentDisplay.textContent = event.key;
 			};
 		}
+		else if (regexForHandlingOperators.test(event.key)) {
+
+			if ((num1.charAt(0) === '+' && num1.length === 1) || (num1.charAt(0) === '-' && num1.length === 1)) {
+				operatorChoosen = null;
+			}
+			else {
+				if (operatorChoosen === null) {
+					operatorChoosen = event.key;
+					currentDisplay.textContent = operatorChoosen;
+					resultDisplay.textContent = finalResult;
+				};
+			};
+		}
 	}
 });
 
