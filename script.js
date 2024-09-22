@@ -50,6 +50,28 @@ let sign = document.querySelectorAll(".sign");
 let deleteButton = document.querySelector(".del");
 let regexForHandlingKeyBoardEvents = /[0-9]/ 
 html.addEventListener("keypress", function() {
+	if (regexForHandlingKeyBoardEvents.test(event.key)) {
+		if (operatorChoosen === null) {
+			if (num1 === undefined) {
+				num1 = event.key;
+				currentDisplay.textContent = num1;
+			}
+			else {
+				num1 += event.key;
+				currentDisplay.textContent = num1;
+			};
+		}
+		else {
+			if (num2 === undefined) {
+				num2 = event.key;
+				currentDisplay.textContent = num2;
+			}
+			else {
+				num2 += event.key;
+				currentDisplay.textContent = num2;
+			};
+		};
+	}
 });
 
 deleteButton.addEventListener("click", () => {
