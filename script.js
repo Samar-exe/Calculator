@@ -61,7 +61,19 @@ deleteButton.addEventListener("click", () => {
 			};
 		}
 	}
+	else {
+		if (num2 != undefined) {
+			if (num2 === "") {
+				num2 = undefined;
+			}
+			else {
+				num2 = num2.slice(0, -1);
+				currentDisplay.textContent = num2;
+			};
+		}
+	}
 })
+
 decimalButton.addEventListener("click", () => {
 	if (operatorChoosen === null) {
 		if (num1 === undefined) {
