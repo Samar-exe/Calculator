@@ -38,6 +38,7 @@ let num2;
 let finalResult = null;
 let operatorChoosen = null;
 // Dom elements.
+let html = document.querySelector("html");
 let resultDisplay = document.querySelector(".resultDisplay");
 let currentDisplay = document.querySelector(".currentDisplay");
 let clearButton = document.querySelector(".clear");
