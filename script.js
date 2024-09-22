@@ -77,6 +77,7 @@ decimalButton.addEventListener("click", () => {
 		};
 	};
 })
+
 function setNum1(value) {
 	if (num1 === undefined) {
 		num1 = value;
@@ -107,9 +108,11 @@ sign.forEach(e => {
 	e.addEventListener("click", () => {
 		if (num1 === undefined && operatorChoosen === null) {
 			setNum1(e.textContent);
+			currentDisplay.textContent = e.textContent;
 		}
 		else if (num2 === undefined && operatorChoosen != null) {
 			setNum2(e.textContent)
+			currentDisplay.textContent = e.textContent;
 		};
 
 	})
@@ -161,11 +164,11 @@ numberButtons.forEach(btn => {
 equalButton.addEventListener("click", () => {
 	if (finalResult === null) {
 		finalResult = selectOperation(parseFloat(num1), parseFloat(num2), operatorChoosen);
-		currentDisplay.textContent = finalResult;
+		currentDisplay.textContent = finalResult.toFixed(1);
 	}
 	else {
 		finalResult = selectOperation(parseFloat(finalResult), parseFloat(num2), operatorChoosen);
-		currentDisplay.textContent = finalResult;
+		currentDisplay.textContent = finalResult.toFixed(1);
 	};
 	num1 = "";
 	num2 = undefined;
