@@ -299,7 +299,12 @@ operatorButtons.forEach(btn => {
       if (operatorChoosen === null) {
         operatorChoosen = btn.textContent;
         currentDisplay.textContent = operatorChoosen;
-        resultDisplay.textContent = finalResult;
+        if (num1Previous != undefined && num1Previous != "") {
+          resultDisplay.textContent = `${num1Previous}${operatorChoosen} ${num2Previous} = ${finalResult}`;
+        }
+        else if(finalPrevious != undefined){
+          resultDisplay.textContent = `${finalPrevious}${operatorChoosen}${num2Previous} = ${finalResult}`;
+        }
       };
     };
   })
@@ -334,6 +339,7 @@ numberButtons.forEach(btn => {
 //run operation function 
 equalButton.addEventListener("click", () => {
   if (finalResult === null) {
+    finalPrevious = finalResult;
     finalResult = selectOperation(parseFloat(num1), parseFloat(num2), operatorChoosen);
     if (finalResult === null) {
       currentDisplay.textContent = "Infinity";
@@ -343,6 +349,7 @@ equalButton.addEventListener("click", () => {
     };
   }
   else {
+    finalPrevious = finalResult;
     finalResult = selectOperation(parseFloat(finalResult), parseFloat(num2), operatorChoosen);
     if (finalResult === null) {
       currentDisplay.textContent = "Infinity";
@@ -351,6 +358,8 @@ equalButton.addEventListener("click", () => {
       currentDisplay.textContent = finalResult.toFixed(1);
     }
   };
+  num1Previous = num1;
+  num2Previous = num2;
   num1 = "";
   num2 = undefined;
   operatorChoosen = null;
