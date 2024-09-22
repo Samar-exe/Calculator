@@ -48,13 +48,10 @@ let equalButton = document.querySelector(".equal");
 let decimalButton = document.querySelector(".dec");
 let sign = document.querySelectorAll(".sign");
 let deleteButton = document.querySelector(".del");
-let regexForHandlingKeyBoardEvents = /[0-9]/ 
-html.addEventListener("keypress", function() {
-let regexForHandlingKeyBoardEvents = /[0-9]/
 let regexForHandlingNumbers = /[0-9]/;
-let regexForHandlingSigns = /[\/+*-]/;
+let regexForHandlingOperators = /[\/+*-]/;
 html.addEventListener("keyup", function() {
-	if (regexForHandlingKeyBoardEvents.test(event.key)) {
+	if (regexForHandlingNumbers.test(event.key)) {
 		if (operatorChoosen === null) {
 			if (num1 === undefined) {
 				num1 = event.key;
