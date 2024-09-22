@@ -37,6 +37,9 @@ function selectOperation(num1, num2, operator) {
 	else {
 		return null;
 	};
+  else if (operator === '%') {
+    return modNumbers(num1, num2);
+  }
 }
 // Assigning variables to be used.
 let num1;
@@ -127,6 +130,7 @@ html.addEventListener("keyup", function() {
 			};
 		}
 		if (event.key === "+" || event.key === "/" || event.key === "*" || event.key === "-") {
+    if (event.key === "+" || event.key === "/" || event.key === "*" || event.key === "-" || event.key === "%") {
 
 			if ((num1.charAt(0) === '+' && num1.length === 1) || (num1.charAt(0) === '-' && num1.length === 1)) {
 				operatorChoosen = null;
