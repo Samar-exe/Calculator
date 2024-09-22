@@ -12,6 +12,12 @@ function divideNumbers(a, b) {
 		return null;
 	}
 	return a / b;
+function modNumbers(a, b) {
+
+  if (b == 0) {
+    return null;
+  }
+  return a % b;
 }
 
 
